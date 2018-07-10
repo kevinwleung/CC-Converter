@@ -46,12 +46,12 @@ def findDef(string):
     
 
     for x in range(0, len(lines)):
-        if finalHex == BMP(lines[x][0:len(finalHex)]):
+        if finalHex == lines[x][0:len(finalHex)]:
             if 'kCantonese' == lines[x][len(finalHex)+1:len(finalHex)+11]:
                 c = '[' + lines[x][len(finalHex)+12:len(lines[x])-1] + ']'
                 
-            if 'kMandarin' == BMP(lines[x][len(finalHex)+1:len(finalHex)+10]):
-                m = '[' + BMP(lines[x][len(finalHex)+11:len(lines[x])-1])+ ']'
+            if 'kMandarin' == lines[x][len(finalHex)+1:len(finalHex)+10]:
+                m = '[' + lines[x][len(finalHex)+11:len(lines[x])-1]+ ']'
                 
             if 'kHangul' == lines[x][len(finalHex)+1:len(finalHex)+8]:
                 h = '['  + lines[x][len(finalHex)+9:len(lines[x])-1] + ']'
@@ -82,4 +82,4 @@ def main():
 
 
 main()
-            
+
