@@ -4,12 +4,12 @@ Simple Python program that converts Chinese characters to Mandarin, Cantonese, H
 Data used from official Unihan Code Database: https://www.unicode.org/Public/UCD/latest/
 
 # Examples:
-1. Enter two characters.
+1. I entered two characters.
 
 ![alt-text](https://github.com/kevinwleung/Hanzi-Converter/blob/master/Images/example1.gif)
 <br/>
 <br/>
 
-2. Enter two words (four characters) separated by spaces.
+2. I entered two words (four characters) separated by spaces.
 
 ![alt-text](https://github.com/kevinwleung/Hanzi-Converter/blob/master/Images/example2.gif)
