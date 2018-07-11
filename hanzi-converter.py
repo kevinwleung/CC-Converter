@@ -43,7 +43,8 @@ def findDef(string):
     m = '[--]'
     h = '[--]'
     v = '[--]'
-    
+    jk = '[--]'
+    jo = '[--]'
 
     for x in range(0, len(lines)):
         if finalHex == lines[x][0:len(finalHex)]:
@@ -57,28 +58,37 @@ def findDef(string):
                 h = '['  + lines[x][len(finalHex)+9:len(lines[x])-1] + ']'
             if 'kVietnamese' == lines[x][len(finalHex)+1:len(finalHex)+12]:
                 v = '[' + lines[x][len(finalHex)+13:len(lines[x])-1] + ']'
-    return(c,m,h,v)
+            if 'kJapaneseKun' == lines[x][len(finalHex)+1:len(finalHex)+13]:
+                jk = '[' + lines[x][len(finalHex)+14:len(lines[x])-1] + ']'
+            if 'kJapaneseOn' == lines[x][len(finalHex)+1:len(finalHex)+12]:
+                jo = '[' + lines[x][len(finalHex)+13:len(lines[x])-1] + ']'
+    return(c,m,h,v, jk, jo)
 
 def main():
     cant = ''
     mand = ''
     # kor = ''
     while True:
-        if version_info[0] > 2:
-            sent = input("Please enter Chinese characters: ")
-        else:
-            sent = raw_input("Please enter Chinese characters: ")
+        print('Note: Use spaces to separate words')
+        sent = input("Please enter Chinese characters: ")
         for x in range(0,len(sent)):
-            theDef = findDef(sent[x])
-            cant = theDef[0]
-            mand = theDef[1]
-            kor = theDef[2]
-            viet = theDef[3]
-            print(sent[x])
-            #print('PUTONG:' + mand + " | " + 'CANTO:' + cant)
-            #print()
-            print('PUTONG:' + mand + " | " + 'CANTO:' + cant + " | " + 'KOR:' +kor + " | " + "VIET:" + viet)
-            print()
+            if sent[x] == ' ':
+                print('----------------------')
+                print()
+            else: 
+                theDef = findDef(sent[x])
+                cant = theDef[0]
+                mand = theDef[1]
+                kor = theDef[2]
+                viet = theDef[3]
+                jk = theDef[4]
+                jo = theDef[5]
+
+                    
+                print(sent[x])
+                print('MANDO:' + mand + " | " + 'CANTO:' + cant + " | " + 'KOR:' +kor + " | " + "VIET:" + viet)
+                print('JPN-On:' + jo + " | " + 'JPN-Kun:' + jk)
+                print()
 
 
 main()
