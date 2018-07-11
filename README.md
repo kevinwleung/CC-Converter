@@ -3,10 +3,9 @@ Simple Python program that converts Chinese characters to Mandarin, Cantonese, H
 
 # Examples:
 1. Enter two characters.
-<br>
+
 ![alt-text](https://github.com/kevinwleung/Hanzi-Converter/blob/master/Images/example1.gif)
-<br>
-<br> 
+
 2. Enter two words (four characters) separated by spaces.
-<br>
+
 ![alt-text](https://github.com/kevinwleung/Hanzi-Converter/blob/master/Images/example2.gif)
