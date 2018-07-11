@@ -8,9 +8,8 @@ Data used from official Unihan Code Database: https://www.unicode.org/Public/UCD
 
 ![alt-text](https://github.com/kevinwleung/Hanzi-Converter/blob/master/Images/example1.gif)
 
-<br>
-<br>
-
+ 
+ 
 2. Enter two words (four characters) separated by spaces.
 
 ![alt-text](https://github.com/kevinwleung/Hanzi-Converter/blob/master/Images/example2.gif)
