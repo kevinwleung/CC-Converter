@@ -47,30 +47,33 @@ def findDef(string):
     finalHex = 'U+' + hex(int((b1 + b2 + b3),2))[2:].upper()
     #print(finalHex
 
-    c = '[--]'
-    m = '[--]'
-    h = '[--]'
-    v = '[--]'
-    jk = '[--]'
-    jo = '[--]'
+    eng = '--'
+    c = '--'
+    m = '--'
+    h = '--'
+    v = '--'
+    jk = '--'
+    jo = '--'
 
     for x in range(0, len(lines)):
         if finalHex == lines[x][0:len(finalHex)]:
             if 'kCantonese' == lines[x][len(finalHex)+1:len(finalHex)+11]:
-                c = '[' + lines[x][len(finalHex)+12:len(lines[x])-1] + ']'
+                c = lines[x][len(finalHex)+12:len(lines[x])-1] 
                 
             if 'kMandarin' == lines[x][len(finalHex)+1:len(finalHex)+10]:
-                m = '[' + lines[x][len(finalHex)+11:len(lines[x])-1]+ ']'
+                m = lines[x][len(finalHex)+11:len(lines[x])-1]
                 
             if 'kHangul' == lines[x][len(finalHex)+1:len(finalHex)+8]:
-                h = '['  + lines[x][len(finalHex)+9:len(lines[x])-1] + ']'
+                h = lines[x][len(finalHex)+9:len(lines[x])-1]
             if 'kVietnamese' == lines[x][len(finalHex)+1:len(finalHex)+12]:
-                v = '[' + lines[x][len(finalHex)+13:len(lines[x])-1] + ']'
+                v = lines[x][len(finalHex)+13:len(lines[x])-1] 
             if 'kJapaneseKun' == lines[x][len(finalHex)+1:len(finalHex)+13]:
-                jk = '[' + lines[x][len(finalHex)+14:len(lines[x])-1] + ']'
+                jk =lines[x][len(finalHex)+14:len(lines[x])-1] 
             if 'kJapaneseOn' == lines[x][len(finalHex)+1:len(finalHex)+12]:
-                jo = '[' + lines[x][len(finalHex)+13:len(lines[x])-1] + ']'
-    return(c,m,h,v, jk, jo)
+                jo = lines[x][len(finalHex)+13:len(lines[x])-1] 
+            if 'kDefinition' == lines[x][len(finalHex)+1:len(finalHex)+12]:
+                eng = lines[x][len(finalHex)+13:len(lines[x])-1] 
+    return(c,m,h,v, jk, jo, eng)
 
 def main():
     cant = ''
@@ -79,6 +82,7 @@ def main():
     while True:
         print('Note: Use spaces to separate words')
         sent = input("Please enter Chinese characters: ")
+        print()
         for x in range(0,len(sent)):
             if sent[x] == ' ':
                 print('----------------------')
@@ -91,11 +95,13 @@ def main():
                 viet = theDef[3]
                 jk = theDef[4]
                 jo = theDef[5]
+                eng = theDef[6]
 
                     
-                print(sent[x])
-                print('MANDO:' + mand + " | " + 'CANTO:' + cant + " | " + 'KOR:' +kor + " | " + "VIET:" + viet)
-                print('JPN-On:' + jo + " | " + 'JPN-Kun:' + jk)
+                print(sent[x] + ':  ' + eng)
+                print('[MANDO: ' + mand + ']     ' + '[CANTO: ' + cant + ']')
+                print('[KOR: ' +kor + ']     ' + '[VIET: ' + viet + ']')
+                print('[J-ON: ' + jo.lower() + ']     ' + '[J-KUN: ' + jk.lower() + ']')
                 print()
 
 
