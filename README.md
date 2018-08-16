@@ -8,10 +8,10 @@ Data used from official Unihan Code Database: https://www.unicode.org/Public/UCD
 # Examples:
 1. I entered two characters.
 
-![alt-text](https://github.com/kevinwleung/Hanzi-Converter/blob/master/Images/example1.gif)
+![alt-text](https://github.com/kevinwleung/Hanzi-Converter/blob/master/Images/hanzi.gif)
 <br/>
 <br/>
 
 2. I entered two words (four characters) separated by spaces.
 
-![alt-text](https://github.com/kevinwleung/Hanzi-Converter/blob/master/Images/example2.gif)
+![alt-text](https://github.com/kevinwleung/Hanzi-Converter/blob/master/Images/hanzi2.gif)
