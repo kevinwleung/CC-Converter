@@ -1,4 +1,4 @@
-# CC-Converter
+# Chinese Character Converter
 Simple Python program that converts Chinese characters to Mandarin, Cantonese, Hangeul (Korean) and Vietnamese and Japanese (Onyomi + Kunyomi) readings using data from Unihan. Open and run with Python 3.6.
 
 NOTE: This program works best when user enters Traditional Chinese characters, as many simplified characters do not have readings in Korean/Japanese/Vietnamese in the database.
